@@ -1,0 +1,370 @@
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F1EFE6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #2E4032;
+    background-image: url('../images/header2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+h1 {
+    font-family: 'Simonetta', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: glowPulse 4s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 
+            0 0 5px rgba(255, 255, 255, 0.8),
+            0 0 10px rgba(255, 255, 255, 0.5),
+            0 0 15px rgba(255, 255, 255, 0.3),
+            2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.9),
+            0 0 20px rgba(255, 255, 255, 0.7),
+            0 0 30px rgba(255, 255, 255, 0.5),
+            2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* View Toggle Button */
+.view-toggle {
+    background-color: #2E4032;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* List View */
+.tree-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tree-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tree-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.species-name {
+    font-weight: bold;
+    color: #2E4032;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.common-name {
+    color: #666;
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
+/* Card View */
+.card-view {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: 40px auto;
+    perspective: 2000px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background: white;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-front:hover img {
+    transform: scale(1.05);
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.card-back h2 {
+    color: #2E4032;
+    font-family: 'Simonetta', serif;
+    margin: 0 0 10px 0;
+}
+
+.card-back p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2E4032;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prev-arrow {
+    left: -80px;
+}
+
+.next-arrow {
+    right: -80px;
+}
+
+.nav-arrow i {
+    font-size: 20px;
+}
+
+/* Menu Button */
+.nav-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #2E4032;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Features List on Card Back */
+.features-list {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.features-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .prev-arrow {
+        left: -60px;
+    }
+    
+    .next-arrow {
+        right: -60px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .card-view {
+        max-width: 90%;
+        height: 500px;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .prev-arrow {
+        left: -45px;
+    }
+
+    .next-arrow {
+        right: -45px;
+    }
+
+    .card-back {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-view {
+        height: 400px;
+    }
+
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .prev-arrow {
+        left: -35px;
+    }
+
+    .next-arrow {
+        right: -35px;
+    }
+
+    .nav-arrow i {
+        font-size: 16px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.tree-item {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.card-view {
+    animation: fadeIn 0.4s ease-out forwards;
+}
