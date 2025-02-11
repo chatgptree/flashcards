@@ -3,7 +3,7 @@ const trees = [
         species: "Popolus simonii",
         commonName: "Chinese Poplar",
         origin: "China",
-        image: "/flashcards/tree_images/jinuo1.jpg",
+        image: "/tree_images/jinuo1.jpg",
         description: "An adaptable and fast-growing deciduous tree with distinctive eye-like patterns on its smooth bark. Popular as a street tree in temperate areas.",
         features: [
             "Height: Up to 20 meters",
