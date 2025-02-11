@@ -1,4 +1,4 @@
-// Template trees data structure
+
 const trees = [
     {
         species: "Popolus simonii",
