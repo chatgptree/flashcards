@@ -2,22 +2,6 @@
 
 import trees from './data/trees.js';
 
-const trees = [
-    {
-        species: "Eucalyptus camaldulensis",
-        commonName: "River Red Gum",
-        origin: "Mainland Australia",
-        image: "../images/trees/rusty.jpg",
-        description: "A familiar and iconic tree, seen along many watercourses across inland Australia.",
-        features: [
-            "Height: 20-45 meters",
-            "Bark: Smooth white or cream-coloured",
-            "Location: Along waterways"
-        ]
-    },
-    // Add more trees...
-];
-
 class TreeCardManager {
     constructor() {
         // State
