@@ -1,4 +1,7 @@
 // Tree data structure
+
+import trees from './data/trees.js';
+
 const trees = [
     {
         species: "Eucalyptus camaldulensis",
