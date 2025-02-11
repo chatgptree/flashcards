@@ -4,7 +4,7 @@ const trees = [
         species: "Eucalyptus camaldulensis",
         commonName: "River Red Gum",
         origin: "Mainland Australia",
-        image: "../images/rusty.jpg",
+        image: "../images/trees/rusty.jpg",
         description: "A familiar and iconic tree, seen along many watercourses across inland Australia.",
         features: [
             "Height: 20-45 meters",
