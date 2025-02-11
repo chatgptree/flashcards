@@ -17,7 +17,7 @@ const trees = [
         species: "Ulmus glabra 'Lutescens'",
         commonName: "Golden Elm",
         origin: "England",
-        image: "../images/trees/elmary.jpg",
+        image: "./tree_images/elmary.jpg",
         description: "A medium-sized, fast-growing deciduous tree with a distinctive golden-yellow foliage. The color intensity varies with sunlight exposure.",
         features: [
             "Height: Up to 15 meters",
@@ -31,7 +31,7 @@ const trees = [
         species: "Corymbia maculata",
         commonName: "Spotted Gum",
         origin: "Coastal Eastern Australia",
-        image: "../images/trees/spotty.jpg",
+        image: "./tree_images/spotty.jpg",
         description: "A tall, majestic eucalypt known for its distinctive smooth, mottled bark that sheds in patches, creating a spotted pattern.",
         features: [
             "Height: 20-45 meters",
@@ -45,7 +45,7 @@ const trees = [
         species: "Olea europaea",
         commonName: "Common Olive",
         origin: "Mediterranean Region",
-        image: "../images/trees/olly.jpg",
+        image: "./tree_images/olly.jpg",
         description: "A small evergreen tree known for its longevity and cultural significance. Characterized by its gnarled trunk and silver-green foliage.",
         features: [
             "Height: 8-15 meters",
@@ -59,7 +59,7 @@ const trees = [
         species: "Corymbia eximia",
         commonName: "Yellow Bloodwood",
         origin: "New South Wales",
-        image: "../images/trees/cory.jpg",
+        image: "./tree_images/cory.jpg",
         description: "A medium to large tree with rough, tessellated bark and a spreading crown. Known for its clusters of cream-colored flowers.",
         features: [
             "Height: Up to 30 meters",
@@ -73,7 +73,7 @@ const trees = [
         species: "Zelkova serrata",
         commonName: "Japanese Zelkova",
         origin: "Japan",
-        image: "../images/trees/ki-chan.jpg",
+        image: "./tree_images/ki-chan.jpg",
         description: "A deciduous tree with a graceful vase-shaped crown and beautiful fall colors. Popular in urban landscapes and traditional Japanese gardens.",
         features: [
             "Height: 20-30 meters",
@@ -87,7 +87,7 @@ const trees = [
         species: "Metasequoia glyptostroboides",
         commonName: "Dawn Redwood",
         origin: "China",
-        image: "../images/trees/jinuo.jpg",
+        image: "./tree_images/jinuo.jpg",
         description: "A living fossil species, rediscovered in 1944. Fast-growing deciduous conifer with feathery foliage that turns russet-brown in autumn.",
         features: [
             "Height: Up to 50 meters",
@@ -101,7 +101,7 @@ const trees = [
         species: "Eucalyptus camaldulensis",
         commonName: "River Red Gum",
         origin: "Mainland Australia",
-        image: "../images/trees/rusty.jpg",
+        image: "./tree_images/rusty.jpg",
         description: "Australia's most widespread eucalyptus species, found along many waterways. Known for its distinctive smooth bark and spreading form.",
         features: [
             "Height: 20-45 meters",
